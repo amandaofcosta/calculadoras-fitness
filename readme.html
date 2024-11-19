@@ -1,174 +1,78 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadoras de Nutrição e Treino</title>
-    <style>
-        body {
-            font-family: "Courier New", Courier, monospace;
-            background-color: #1a1a1a;
-            color: #dcdcdc;
-            margin: 0;
-            padding: 0;
-        }
-        h1, h2, h3 {
-            color: #ffffff;
-        }
-        h1 {
-            font-size: 40px;
-            text-align: center;
-            margin-top: 20px;
-        }
-        h2 {
-            font-size: 28px;
-            margin-top: 40px;
-        }
-        h3 {
-            font-size: 22px;
-            margin-top: 20px;
-        }
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin: 10px 0;
-        }
-        ul {
-            font-size: 16px;
-            line-height: 1.6;
-            list-style-type: square;
-            margin-left: 20px;
-        }
-        code {
-            background-color: #333;
-            padding: 5px;
-            font-size: 16px;
-        }
-        .highlight {
-            color: #ffeb3b;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .tech-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .tech-icons span {
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #555;
-            color: #fff;
-            font-weight: bold;
-        }
-        .repo-structure {
-            background-color: #333;
-            padding: 15px;
-            border-radius: 5px;
-            font-family: "Courier New", Courier, monospace;
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-        }
-        footer a {
-            color: #ffeb3b;
-            text-decoration: none;
-        }
-        .footer-text {
-            font-size: 14px;
-            color: #888;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Calculadoras de Nutrição e Treino</h1>
-        <p>Se você adora treinar, cuidar da alimentação, hidratação e entender como seu corpo responde a tudo isso, esse projeto foi feito para você! 💪🏼</p>
-        <p>Essa é a minha coleção de **calculadoras** que vão te ajudar a gerenciar sua rotina de treino e dieta de maneira simples e eficaz. Aqui, você vai encontrar as ferramentas para entender melhor suas necessidades de **hidratação**, **macronutrientes**, **calorias** e como calcular o **gasto energético** com base em sua atividade física e objetivos. 💥</p>
+# Calculadoras de Nutrição e Treino
 
-        <h2>Objetivo</h2>
-        <p>O principal objetivo desse projeto é criar uma série de calculadoras que ajudem você a alcançar seus objetivos fitness, seja para perder peso, manter a forma ou ganhar massa muscular. Aqui está o que cada ferramenta pode te ajudar a calcular:</p>
-        <ul>
-            <li>Quantidade de água necessária por dia 💧</li>
-            <li>Ingestão diária de macronutrientes (proteínas, carboidratos e gorduras) 🥑</li>
-            <li>Calorias e macronutrientes dos alimentos com base na tabela TACO 🥗</li>
-            <li>Taxa Metabólica Basal (TMB) ⚡️</li>
-            <li>Gasto Energético Total (GEBT) 🏃🏻‍♂️</li>
-        </ul>
+Se você adora treinar, cuidar da alimentação, hidratação e entender como seu corpo responde a tudo isso, esse projeto foi feito para você! 💪🏼
 
-        <h2>Funcionalidades do Projeto</h2>
-        <ul>
-            <li><strong>Calculadora de Hidratação:</strong> Descubra a quantidade de água que você deve beber por dia, com base em seu peso, idade e nível de atividade física.</li>
-            <li><strong>Calculadora de Macronutrientes:</strong> Calcule a ingestão diária de proteínas, carboidratos e gorduras, dependendo do seu objetivo (emagrecimento, manutenção ou ganho de massa).</li>
-            <li><strong>Calculadora de TMB (Taxa de Metabolismo Basal):</strong> Calcule quantas calorias seu corpo queima em repouso, utilizando a fórmula de Harris-Benedict.</li>
-            <li><strong>Tabela TACO de Alimentos:</strong> Consulte calorias e macronutrientes dos alimentos com base na famosa Tabela TACO.</li>
-            <li><strong>Calculadora de Gasto Energético:</strong> Calcule o gasto calórico com base em diferentes tipos de exercício e sua intensidade.</li>
-        </ul>
+Essa é a minha coleção de **calculadoras** que vão te ajudar a gerenciar sua rotina de treino e dieta de maneira simples e eficaz. Aqui, você vai encontrar as ferramentas para entender melhor suas necessidades de **hidratação**, **macronutrientes**, **calorias** e como calcular o **gasto energético** com base em sua atividade física e objetivos. 💥
 
-        <h2>Referências para os Fatores de Atividade</h2>
-        <p>Abaixo estão as fontes utilizadas para calcular os fatores de atividade física usados no cálculo do Gasto Energético Total (GEBT):</p>
-        <ul>
-            <li><strong>Organização Mundial da Saúde (OMS):</strong> A OMS fornece diretrizes amplas sobre a atividade física e saúde, incluindo recomendações sobre a intensidade do exercício e os níveis de atividade física para diferentes faixas etárias.</li>
-            <li><strong>Equações de Harris-Benedict:</strong> A fórmula para o cálculo da Taxa de Metabolismo Basal (TMB) foi proposta por Harris e Benedict em 1919 e é utilizada para calcular o GEBT.</li>
-            <li><strong>Tabela TACO (Tabela Brasileira de Composição de Alimentos):</strong> Fornece informações sobre a composição nutricional dos alimentos no Brasil, usada para calcular calorias e macronutrientes.</li>
-            <li><strong>National Institutes of Health (NIH):</strong> Usados fatores de atividade semelhantes aos do NIH, que ajustam os níveis de atividade de acordo com a intensidade do exercício.</li>
-            <li><strong>American College of Sports Medicine (ACSM):</strong> A ACSM é uma referência importante na definição dos fatores de atividade usados para calcular o GEBT.</li>
-            <li><strong>Tabela METs (Múltiplos de Equivalentes Metabólicos):</strong> Fornece os valores para calcular o gasto calórico de diversas atividades físicas.</li>
-        </ul>
+## Objetivo
 
-        <h2>Tecnologias Utilizadas</h2>
-        <div class="tech-icons">
-            <span>Python</span>
-            <span>SQL</span>
-            <span>Excel</span>
-            <span>Power BI</span>
-        </div>
+O principal objetivo desse projeto é criar uma série de calculadoras que ajudem você a alcançar seus objetivos fitness, seja para perder peso, manter a forma ou ganhar massa muscular. Aqui está o que cada ferramenta pode te ajudar a calcular:
 
-        <h2>Estrutura do Repositório</h2>
-        <div class="repo-structure">
-            <pre>
-                Calculadoras-Nutri-Treino/
-                │
-                ├── README.md                 # O arquivo que você está lendo 😁
-                ├── python-scripts/           # Scripts Python para cada calculadora
-                │   ├── calculadora_hidracao.py
-                │   ├── calculadora_macros.py
-                │   ├── calculadora_tmb.py
-                │   ├── calculadora_gasto_energetico.py
-                │   └── calculadora_calorias_macros_alimentos.py
-                ├── sql/                      # Banco de dados SQL com dados de alimentos e exercícios
-                │   ├── tabela_taco.sql       # Tabela TACO com informações de alimentos
-                │   └── tabela_mets.sql       # Tabela METs com as atividades e seus respectivos METs
-                │   └── formulas.sql          # Tabelas com as fórmulas de TMB e GEBT
-                ├── reports/                  # Relatórios em Excel e Dashboard em Power BI
-                │   ├── relatorio_nutricional.xlsx
-                │   └── dashboard_powerbi.pbix
-                └── requirements.txt          # Dependências do projeto (pacotes Python)
-            </pre>
-        </div>
+- Quantidade de água necessária por dia 💧
+- Ingestão diária de macronutrientes (proteínas, carboidratos e gorduras) 🥑
+- Calorias e macronutrientes dos alimentos com base na tabela TACO 🥗
+- Taxa Metabólica Basal (TMB) ⚡️
+- Gasto Energético Total (GEBT) 🏃🏻‍♂️
 
-        <h2>Contribuindo</h2>
-        <p>Quer ajudar a melhorar esse projeto? Aqui está como você pode contribuir:</p>
-        <ul>
-            <li>Faça um fork desse repositório.</li>
-            <li>Crie uma nova branch para suas alterações.</li>
-            <li>Envie um pull request com suas melhorias.</li>
-        </ul>
+## Funcionalidades do Projeto
 
-        <h2>Licença</h2>
-        <p>Este projeto está sob a licença <strong>MIT</strong>. Fique à vontade para usar, modificar e compartilhar o código como preferir! 🚀</p>
+- **Calculadora de Hidratação**: Descubra a quantidade de água que você deve beber por dia, com base em seu peso, idade e nível de atividade física.
+- **Calculadora de Macronutrientes**: Calcule a ingestão diária de proteínas, carboidratos e gorduras, dependendo do seu objetivo (emagrecimento, manutenção ou ganho de massa).
+- **Calculadora de TMB (Taxa de Metabolismo Basal)**: Calcule quantas calorias seu corpo queima em repouso, utilizando a fórmula de Harris-Benedict.
+- **Tabela TACO de Alimentos**: Consulte calorias e macronutrientes dos alimentos com base na famosa Tabela TACO.
+- **Calculadora de Gasto Energético**: Calcule o gasto calórico com base em diferentes tipos de exercício e sua intensidade.
 
-        <h2>Contato</h2>
-        <p>Ficou com dúvidas, sugestões ou só quer bater um papo sobre nutrição, treino ou análise de dados? Me mande um e-mail: <a href="mailto:amanda.oliveirafc@gmail.com">amanda.oliveirafc@gmail.com</a> 📧</p>
+## Referências para os Fatores de Atividade
 
-    </div>
+Abaixo estão as fontes utilizadas para calcular os fatores de atividade física usados no cálculo do Gasto Energético Total (GEBT):
 
-</body>
-</html>
+- **Organização Mundial da Saúde (OMS)**: A OMS fornece diretrizes amplas sobre a atividade física e saúde, incluindo recomendações sobre a intensidade do exercício e os níveis de atividade física para diferentes faixas etárias.
+- **Equações de Harris-Benedict**: A fórmula para o cálculo da Taxa de Metabolismo Basal (TMB) foi proposta por Harris e Benedict em 1919 e é utilizada para calcular o GEBT.
+- **Tabela TACO (Tabela Brasileira de Composição de Alimentos)**: Fornece informações sobre a composição nutricional dos alimentos no Brasil, usada para calcular calorias e macronutrientes.
+- **National Institutes of Health (NIH)**: Usados fatores de atividade semelhantes aos do NIH, que ajustam os níveis de atividade de acordo com a intensidade do exercício.
+- **American College of Sports Medicine (ACSM)**: A ACSM é uma referência importante na definição dos fatores de atividade usados para calcular o GEBT.
+- **Tabela METs (Múltiplos de Equivalentes Metabólicos)**: Fornece os valores para calcular o gasto calórico de diversas atividades físicas.
+
+## Tecnologias Utilizadas
+
+- **Python**
+- **SQL**
+- **Excel**
+- **Power BI**
+
+## Estrutura do Repositório
+
+```bash
+Calculadoras-Nutri-Treino/
+│
+├── README.md                 # O arquivo que você está lendo 😁
+├── python-scripts/           # Scripts Python para cada calculadora
+│   ├── calculadora_hidracao.py
+│   ├── calculadora_macros.py
+│   ├── calculadora_tmb.py
+│   ├── calculadora_gasto_energetico.py
+│   └── calculadora_calorias_macros_alimentos.py
+├── sql/                      # Banco de dados SQL com dados de alimentos e exercícios
+│   ├── tabela_taco.sql       # Tabela TACO com informações de alimentos
+│   └── tabela_mets.sql       # Tabela METs com as atividades e seus respectivos METs
+├── reports/                  # Relatórios em Excel e Dashboard em Power BI
+│   ├── relatorio_nutricional.xlsx
+└── └── dashboard_powerbi.pbix
+
+
+## Contribuindo
+
+Quer ajudar a melhorar esse projeto? Aqui está como você pode contribuir:
+
+- Faça um fork desse repositório.
+- Crie uma nova branch para suas alterações.
+- Envie um pull request com suas melhorias.
+
+## Licença
+
+Este projeto está sob a licença **MIT**. Fique à vontade para usar, modificar e compartilhar o código como preferir! 🚀
+
+## Contato
+
+Ficou com dúvidas, sugestões ou só quer bater um papo sobre nutrição, treino ou análise de dados? Me mande um e-mail: [amanda.oliveirafc@gmail.com] 📧
+
